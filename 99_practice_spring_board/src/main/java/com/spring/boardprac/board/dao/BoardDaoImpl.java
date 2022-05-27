@@ -23,5 +23,10 @@ public class BoardDaoImpl implements BoardDao {
 	public List<BoardDto> selectAll() {
 		return sqlSession.selectList("boardMapperPrac.selectAll");
 	}
+
+	@Override
+	public BoardDto selectBoard(int num) {
+		return sqlSession.selectOne("boardMapperPrac.selectBoard" , num);
+	}
 	
 }

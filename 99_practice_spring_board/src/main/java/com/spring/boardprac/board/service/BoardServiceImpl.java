@@ -23,5 +23,10 @@ public class BoardServiceImpl implements BoardService {
 	public List<BoardDto> getAllBoard() {
 		return boardDao.selectAll();
 	}
+
+	@Override
+	public BoardDto getOneBoard(int num) {
+		return boardDao.selectBoard(num);
+	}
 	
 }

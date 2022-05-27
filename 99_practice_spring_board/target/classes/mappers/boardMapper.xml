@@ -30,5 +30,14 @@
 		FROM
 				T_SPRING_BOARD
 	</select>
+	
+	<select id="selectBoard" parameterType="int" resultType="BoardDto">
+		SELECT
+				*
+		FROM
+				T_SPRING_BOARD
+		WHERE
+				NUM=#{num}
+	</select>
 
 </mapper>
