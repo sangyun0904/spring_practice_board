@@ -47,7 +47,7 @@
 			<tr>	
 				<td colspan="2">
 					<input type="button" value="수정하기" onclick="location.href='boardUpdate'">
-					<input type="button" value="삭제하기" onclick="location.href='boardDelete'">
+					<input type="button" value="삭제하기" onclick="location.href='boardDelete?num=${boardDto.num}'">
 					<input type="button" value="목록보기" onclick="location.href='boardList'">
 				</td>	
 			</tr>
