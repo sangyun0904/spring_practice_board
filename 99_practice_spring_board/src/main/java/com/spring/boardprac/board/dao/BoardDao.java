@@ -9,5 +9,6 @@ public interface BoardDao {
 	public void insert(BoardDto boardDto);
 	public List<BoardDto> selectAll();
 	public BoardDto selectBoard(int num);
+	public void updateReadCount(int num);
 	
 }

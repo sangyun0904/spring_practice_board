@@ -39,5 +39,14 @@
 		WHERE
 				NUM=#{num}
 	</select>
+	
+	<update id="updateReadCount" parameterType="int">
+		UPDATE
+				T_SPRING_BOARD 
+		SET
+				READ_COUNT = READ_COUNT + 1
+		WHERE
+				NUM = #{num}
+	</update>
 
 </mapper>

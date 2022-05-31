@@ -26,6 +26,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public BoardDto getOneBoard(int num) {
+		boardDao.updateReadCount(num);
 		return boardDao.selectBoard(num);
 	}
 	

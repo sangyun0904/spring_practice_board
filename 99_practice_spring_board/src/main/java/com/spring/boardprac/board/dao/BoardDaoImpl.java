@@ -28,5 +28,10 @@ public class BoardDaoImpl implements BoardDao {
 	public BoardDto selectBoard(int num) {
 		return sqlSession.selectOne("boardMapperPrac.selectBoard" , num);
 	}
+
+	@Override
+	public void updateReadCount(int num) {
+		sqlSession.update("boardMapperPrac.updateReadCount" , num);
+	}
 	
 }
