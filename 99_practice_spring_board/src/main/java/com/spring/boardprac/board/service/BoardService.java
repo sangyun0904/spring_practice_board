@@ -9,5 +9,6 @@ public interface BoardService {
 	public void insertBoard(BoardDto boardDto);
 	public List<BoardDto> getAllBoard();
 	public BoardDto getOneBoard(int num);
+	public boolean deleteBoard(BoardDto boardDto);
 	
 }

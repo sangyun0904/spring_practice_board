@@ -60,4 +60,15 @@ public class BoardController {
 		return mv;
 	}
 	
+	@RequestMapping(value="boardUpdate" , method=RequestMethod.GET) 
+	public ModelAndView boardUpdate(@RequestParam("num") int num) {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("/board/bUpdate");
+		mv.addObject("boardDto" , boardService.getOneBoard(num));
+		
+		return mv;
+		
+	}
+	
 }

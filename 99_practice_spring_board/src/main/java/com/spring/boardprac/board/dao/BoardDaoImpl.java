@@ -33,5 +33,16 @@ public class BoardDaoImpl implements BoardDao {
 	public void updateReadCount(int num) {
 		sqlSession.update("boardMapperPrac.updateReadCount" , num);
 	}
+
+
+	@Override
+	public BoardDto validateBoard(BoardDto boardDto) {
+		return sqlSession.selectOne("boardMapper.validateUserCheck" , boardDto);
+	}
 	
+	@Override
+	public void deleteBoard(int num) {
+		sqlSession.delete("boardMapperPrac.deleteBoard", num);
+		
+	}
 }

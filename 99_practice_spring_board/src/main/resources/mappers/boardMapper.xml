@@ -48,5 +48,31 @@
 		WHERE
 				NUM = #{num}
 	</update>
+	
+	<select id="validateUserCheck" parameterType="BoardDto" resultType="BoardDto">
+		SELECT
+				*
+		FROM
+				T_SPRING_BOARD
+		WHERE
+				NUM = #{num} AND PASSWORD = #{password}
+	</select>
+	
+	<delete id="deleteBoard" parameterType="BoardDto">
+		DELETE FROM
+				T_SPRING_BOARD
+		WHERE
+				NUM = #{num}
+	</delete>
+	
+	<update id="modifyBoard" parameterType="BoardDto">
+		UPDATE 
+				T_SPRING_BOARD
+		SET
+				SUBJECT = #{subject},
+				CONTENT = #{content}
+		WHERE
+				NUM = #{num}
+	</update>
 
 </mapper>

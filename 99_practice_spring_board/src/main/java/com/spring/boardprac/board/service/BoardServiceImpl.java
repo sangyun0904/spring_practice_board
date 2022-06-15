@@ -29,5 +29,18 @@ public class BoardServiceImpl implements BoardService {
 		boardDao.updateReadCount(num);
 		return boardDao.selectBoard(num);
 	}
+
+	@Override
+	public boolean deleteBoard(BoardDto boardDto) {
+		boolean isDelete = false;
+		
+		if (boardDao.validateBoard(boardDto) != null) {
+			boardDao.deleteBoard(boardDto.getNum());
+			isDelete = true;
+		}
+		
+		return isDelete;
+		
+	}
 	
 }

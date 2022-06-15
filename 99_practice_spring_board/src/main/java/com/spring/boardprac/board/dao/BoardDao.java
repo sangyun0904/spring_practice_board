@@ -10,5 +10,7 @@ public interface BoardDao {
 	public List<BoardDto> selectAll();
 	public BoardDto selectBoard(int num);
 	public void updateReadCount(int num);
+	public BoardDto validateBoard(BoardDto boardDto);
+	public void deleteBoard(int num);
 	
 }
